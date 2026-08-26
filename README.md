@@ -1,6 +1,6 @@
 # 心流直觉｜华科大全球校友创新创业大赛路演
 
-本仓库保存可继续编辑的 HTML 路演源文件，并通过 GitHub Pages 提供在线演示。
+本仓库保存可继续编辑的 HTML 路演源文件，并通过 GitHub Pages 提供在线演示。当前 `index.html` 为 12 页、4 分 45 秒的比赛现场版本。
 
 ## 在线演示
 
@@ -13,6 +13,9 @@ https://yt-x-beijing.github.io/flow-intuition-hust-innovation/
 ```text
 .
 ├── index.html                         # 唯一演示源文件，也是 Pages 入口
+├── SPEAKER_NOTES_5MIN.md              # 逐页时间与5分钟讲述重点
+├── archive/
+│   └── roadshow-full-18-slides.html   # 压缩前18页完整备份
 ├── assets/                            # 原始图片资源，供后续编辑使用
 ├── references/
 │   ├── LIBERO10_EXTERNAL_MEMORY_DEMO.md
@@ -37,8 +40,9 @@ python3 -m http.server 8000
 1. Clone 本仓库并在 Coding Agent 中打开仓库目录。
 2. 先阅读 `AGENTS.md` 和相关 `references/` 文件。
 3. 直接修改 `index.html`；它是唯一演示源文件。
-4. 在 1920×1080、1280×720 和手机视口下检查页面。
-5. 提交并推送到 `main`，GitHub Pages 会自动更新。
+4. 按 `SPEAKER_NOTES_5MIN.md` 控制页面节奏，总讲述时长保持在 4分30秒—4分45秒。
+5. 在 1920×1080、1280×720 和手机视口下检查页面。
+6. 提交并推送到 `main`，GitHub Pages 会自动更新。
 
 常用命令：
 

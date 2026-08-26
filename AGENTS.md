@@ -2,7 +2,9 @@
 
 ## 修改入口
 
-- `index.html` 是唯一演示源文件和 GitHub Pages 入口。
+- `index.html` 是12页、4分45秒的主路演源文件和 GitHub Pages 入口。
+- `SPEAKER_NOTES_5MIN.md` 记录逐页时间与讲述重点，修改页面结构时需同步更新。
+- `archive/roadshow-full-18-slides.html` 是压缩前备份，只用于找回细节，不作为 Pages 入口。
 - `assets/` 保存原始图片资源，避免重新生成团队照片和原 BP 截图。
 - 修改前先阅读 `references/` 中与当前页面相关的材料。
 
@@ -17,6 +19,7 @@
 - P4 技术架构必须遵守 `references/P4_TECHNICAL_LOGIC.md`。
 - 不得自行合并、重命名或重新定义原 BP 的技术模块。
 - Demo 指标必须区分已有指标与建议新增指标，不得把规划能力表述为已实现能力。
+- 主路演必须保留 Agent 三组实验与 Physical AI Demo，不得为缩短时间删除关键证据链。
 
 ## 视觉与兼容性
 
