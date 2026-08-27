@@ -2,9 +2,10 @@
 
 ## 修改入口
 
-- `index.html` 是12页、4分45秒的主路演源文件和 GitHub Pages 入口。
-- `SPEAKER_NOTES_5MIN.md` 记录逐页时间与讲述重点，修改页面结构时需同步更新。
-- `archive/roadshow-full-18-slides.html` 是压缩前备份，只用于找回细节，不作为 Pages 入口。
+- `index.html` 是12页主路演源文件和 GitHub Pages 入口。
+- `SPEAKER_NOTES_5MIN.md` 记录完整口播稿、逐页时间与 Demo 数据占位符，修改页面结构或表述时必须同步更新。
+- `archive/18-page-version/index.html` 是压缩前18页完整版本，可查看、恢复和继续修改，但不作为 Pages 入口。
+- Git tag `archive-18-page-v1` 指向压缩前的完整仓库快照，不得移动或覆盖。
 - `assets/` 保存原始图片资源，避免重新生成团队照片和原 BP 截图。
 - 修改前先阅读 `references/` 中与当前页面相关的材料。
 
