@@ -253,6 +253,53 @@
     .five-agent-slide .validation-result { padding: 10px 12px; }
     .five-agent-slide .validation-conclusion { margin-top: 11px; padding: 12px 20px; }
 
+    .p8-slide { background:#f3efe7; color:#15181d; }
+    .p8-slide::after { content:"PHYSICAL AI DEMO · 08"; position:absolute; right:72px; bottom:30px; color:#9a978f; font-size:15px; font-weight:800; letter-spacing:.14em; }
+    .p8-frame { position:absolute; inset:52px 110px 70px; }
+    .p8-eyebrow { display:flex; align-items:center; gap:14px; color:#c4162a; font-size:18px; font-weight:900; letter-spacing:.13em; }
+    .p8-eyebrow::before { content:""; width:42px; height:5px; border-radius:10px; background:#c4162a; }
+    .p8-title { margin:22px 0 0; max-width:1510px; font-size:58px; line-height:1.12; letter-spacing:-.035em; }
+    .p8-title em { color:#c4162a; font-style:normal; }
+    .p8-subhead { margin-top:12px; font-size:21px; color:#73777e; white-space:nowrap; }
+    .p8-content { margin-top:24px; display:grid; grid-template-columns:450px minmax(0,1fr); gap:20px; height:650px; }
+    .p8-side { display:flex; flex-direction:column; gap:14px; }
+    .p8-score { padding:25px 24px; border-radius:23px; background:#c4162a; color:#fff; box-shadow:0 18px 45px rgba(196,22,42,.22); }
+    .p8-score small { display:block; font-size:15px; font-weight:800; opacity:.78; }
+    .p8-score b { display:block; margin-top:10px; font-size:48px; line-height:1; letter-spacing:-.025em; }
+    .p8-score p { margin:10px 0 0; font-size:15px; line-height:1.45; opacity:.8; }
+    .p8-compare { display:grid; grid-template-columns:1fr 42px 1fr; align-items:stretch; }
+    .p8-method { min-height:160px; padding:20px; border-radius:19px; background:#fff; border:1px solid #d9d4ca; }
+    .p8-method.ours { color:#fff; background:#0b0d11; border-color:#0b0d11; }
+    .p8-method .label { color:#73777e; font-size:14px; font-weight:850; }
+    .p8-method.ours .label { color:#39d7d0; }
+    .p8-method strong { display:block; margin-top:13px; font-size:22px; line-height:1.25; }
+    .p8-method p { margin:9px 0 0; color:#73777e; font-size:14px; line-height:1.5; }
+    .p8-method.ours p { color:rgba(255,255,255,.62); }
+    .p8-arrow { display:flex; align-items:center; justify-content:center; color:#c4162a; font-size:30px; font-weight:900; }
+    .p8-growth { flex:1; min-height:245px; padding:17px 20px; border-radius:21px; background:#fff; border:1px solid #d9d4ca; }
+    .p8-growth h3 { margin:0; font-size:20px; line-height:1.25; }
+    .p8-growth p { margin:5px 0 0; color:#73777e; font-size:12px; line-height:1.4; }
+    .p8-chart { width:100%; height:82px; margin-top:7px; }
+    .p8-axis { stroke:#b7bbc0; stroke-width:3; }
+    .p8-success-line { fill:none; stroke:#c4162a; stroke-width:7; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:850; stroke-dashoffset:850; animation:p8Draw 7s .7s steps(10,end) infinite; }
+    .p8-dot { fill:#fff; stroke:#c4162a; stroke-width:4; animation:p8Pulse 2s infinite; }
+    .p8-intervention-line { fill:none; stroke:#2e75ff; stroke-width:6; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:850; stroke-dashoffset:850; animation:p8Draw 7s .7s steps(10,end) infinite; }
+    .p8-intervention-head { margin-top:4px; display:flex; justify-content:space-between; align-items:baseline; }
+    .p8-intervention-head strong { font-size:15px; }
+    .p8-intervention-head span { color:#2e75ff; font-size:17px; font-weight:900; }
+    .p8-stage-labels { display:grid; grid-template-columns:repeat(3,1fr); margin-top:-5px; text-align:center; color:#73777e; font-size:12px; font-weight:800; }
+    .p8-demo { min-width:0; height:650px; display:flex; flex-direction:column; color:#15181d; }
+    .p8-demo-head { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .p8-demo-head strong { font-size:24px; }
+    .p8-demo-head span { padding:7px 13px; border-radius:99px; background:#dff5f2; color:#087f74; font-size:14px; font-weight:850; }
+    .p8-demo-media { height:530px; margin-top:10px; }
+    .p8-demo-window { position:relative; height:530px; overflow:hidden; border-radius:10px; background:#0b0d11; box-shadow:0 14px 38px rgba(14,17,22,.16); }
+    .p8-demo-window video { display:block; width:100%; height:100%; object-fit:contain; background:#0b0d11; }
+    .p8-case-tabs { margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .p8-case-tabs div { padding:10px 14px; border-radius:9px; border:1px solid #d9d4ca; background:rgba(255,255,255,.55); color:#656970; text-align:center; font-size:14px; font-weight:700; }
+    @keyframes p8Draw { 0%{stroke-dashoffset:850} 82%,100%{stroke-dashoffset:0} }
+    @keyframes p8Pulse { 50%{r:8px} }
+
     .five-demo-slide .demo-protocol { margin-top: 15px; }
     .five-demo-slide .demo-protocol div { padding: 11px 16px; }
     .five-demo-grid { margin-top: 13px; gap: 16px; }
@@ -1118,48 +1165,44 @@
       </section>
 
       <!-- 08 Physical AI demo: growth, transfer, metrics and attribution -->
-      <section class="slide five-demo-slide" data-page="08" data-section="Physical AI Demo" data-duration="40">
-        <div class="frame tight">
-          <div class="eyebrow reveal">机器人场景验证 · LIBERO-10</div>
-          <h2 class="kicker reveal d1" style="font-size:58px" data-editable>机器人开始把经验用到下一次任务</h2>
-          <div class="demo-protocol reveal d2">
-            <div><b>实验目标</b><span>验证部署经验能否改善未来任务表现</span></div>
-            <div><b>实验设计</b><span>同一冻结基座模型，依次运行任务 0 → 7 → 1</span></div>
-            <div><b>对比方式</b><span>空 / 少量 / 完整经验；无历史 / 无关历史 / 相关历史</span></div>
-            <div><b>核心控制</b><span>目标任务专属记忆保持为 0</span></div>
-          </div>
-          <div class="demo-proof-grid five-demo-grid">
-            <div class="demo-panel reveal d2">
-              <span class="tag">实验 A · 同类任务</span><h3>经验越多，表现越好</h3><p class="panel-note">验证经验积累能否形成可观察的成长曲线</p>
-              <div class="mini-curve">
-                <svg viewBox="0 0 760 310" role="img" aria-label="经验增加带来成功率或效率持续提升">
-                  <defs><linearGradient id="compactCurveGradient" x1="0" x2="1"><stop offset="0" stop-color="#c4162a"/><stop offset="1" stop-color="#2e75ff"/></linearGradient></defs>
-                  <g class="curve-grid"><line x1="42" y1="255" x2="720" y2="255"/><line x1="42" y1="155" x2="720" y2="155"/><line x1="42" y1="55" x2="720" y2="55"/></g>
-                  <path class="curve-line" style="stroke:url(#compactCurveGradient)" d="M110 238 C250 228 280 182 380 165 S570 82 675 62"/>
-                  <circle class="curve-dot" cx="110" cy="238" r="11"/><circle class="curve-dot" cx="380" cy="165" r="11"/><circle class="curve-dot" cx="675" cy="62" r="11"/>
+      <section class="slide p8-slide" data-page="08" data-section="Physical AI Demo" data-duration="40">
+        <div class="p8-frame">
+          <div class="p8-eyebrow">已完成验证 · LIBERO-10（LIBERO-LONG）长程任务</div>
+          <h2 class="p8-title">机器人交付后，能力仍能随部署经验<em>持续增长</em></h2>
+          <div class="p8-subhead">冻结原有策略，无需重新训练，让部署经验持续转化为能力，降低现场适配成本并沉淀长期数据资产。</div>
+          <div class="p8-content">
+            <aside class="p8-side">
+              <div class="p8-score"><small>LIBERO-10（LIBERO-LONG）· 500 次官方状态长程执行</small><b>93.4% → 94.6%</b><p>相同初始状态成对比较，唯一变量是是否调用历史经验。</p></div>
+              <div class="p8-compare">
+                <div class="p8-method"><div class="label">原始方式</div><strong>任务之间彼此独立</strong><p>历史执行结束即丢失，环境变化通常需要重新适配。</p></div>
+                <div class="p8-arrow">→</div>
+                <div class="p8-method ours"><div class="label">我们的方法</div><strong>经验成为长期资产</strong><p>部署中持续积累；可信时介入，不可靠时自动回退。</p></div>
+              </div>
+              <div class="p8-growth">
+                <h3>经验越用越多，并持续转化为成功结果</h3>
+                <p>红线：累计成功次数差（经验增强－无记忆），允许阶段性波动。</p>
+                <svg class="p8-chart" viewBox="0 0 390 88" aria-label="累计成功次数差从早期加二增长到完整实验加六">
+                  <line class="p8-axis" x1="15" y1="72" x2="375" y2="72"/><polyline class="p8-success-line" points="18,57 58,57 98,49 138,41 178,57 218,57 258,31 298,20 338,20 372,20"/><circle class="p8-dot" cx="18" cy="57" r="4"/><circle class="p8-dot" cx="258" cy="31" r="4"/><circle class="p8-dot" cx="372" cy="20" r="4"/><text x="11" y="43" fill="#c4162a" font-size="12" font-weight="800">+2</text><text x="248" y="17" fill="#c4162a" font-size="12" font-weight="800">+5</text><text x="358" y="14" fill="#c4162a" font-size="12" font-weight="800">+6</text>
                 </svg>
-                <div class="mini-curve-values"><span data-editable>LIVE</span><span data-editable>LIVE</span><span data-editable>LIVE</span></div>
-                <div class="mini-curve-labels"><span>空记忆</span><span>少量经验</span><span>完整经验</span></div>
+                <div class="p8-intervention-head"><strong>累计有效记忆干预</strong><span>6,657 次</span></div>
+                <svg class="p8-chart" viewBox="0 0 390 82" aria-label="累计有效记忆干预次数从787次逐任务增长到6657次">
+                  <line class="p8-axis" x1="15" y1="69" x2="375" y2="69"/><polyline class="p8-intervention-line" points="18,61 58,56 98,51 138,45 178,39 218,35 258,28 298,20 338,16 372,11"/>
+                  <g fill="#2e75ff" font-size="8.5" font-weight="800"><text x="9" y="51">787</text><text x="46" y="73">1,361</text><text x="84" y="42">1,984</text><text x="123" y="65">2,634</text><text x="163" y="30">3,382</text><text x="202" y="57">3,869</text><text x="242" y="18">4,684</text><text x="282" y="48">5,557</text><text x="322" y="8">5,978</text><text x="350" y="29">6,657</text></g>
+                </svg>
+                <div class="p8-stage-labels"><span>同任务经验积累</span><span>相似任务技能迁移</span><span>跨类型任务扩展</span></div>
+                <p>16,815 个决策点中实际介入 39.6%；仅检索到但未通过门控的不计入。</p>
               </div>
-            </div>
-            <div class="demo-panel dark-panel reveal d3">
-              <span class="tag">实验 B · 跨任务</span><h3>相关经验改善首次执行</h3><p class="panel-note">排除目标任务重复经验，检验真正的经验迁移</p>
-              <div class="transfer-list">
-                <div class="transfer-row"><strong>无历史记忆</strong><div class="memory-bar"><i></i></div><b data-editable>LIVE</b></div>
-                <div class="transfer-row random"><strong>随机 / 无关历史</strong><div class="memory-bar"><i></i></div><b data-editable>LIVE</b></div>
-                <div class="transfer-row related"><strong>相关任务历史</strong><div class="memory-bar"><i></i></div><b data-editable>LIVE</b></div>
+            </aside>
+            <section class="p8-demo">
+              <div class="p8-demo-head"><strong>真实案例：同一起点，无记忆失败；经验增强直接完成</strong><span>每次检索来源可追溯</span></div>
+              <div class="p8-demo-media">
+                <div class="p8-demo-window">
+                  <video id="p8DemoVideo" controls autoplay muted loop playsinline preload="metadata" poster="assets/openvla-memory/libero-memory-two-cases-poster.jpg"><source src="assets/openvla-memory/libero-memory-two-cases.mp4" type="video/mp4">浏览器不支持视频播放。</video>
+                </div>
               </div>
-              <p class="source-note" style="position:absolute;left:22px;right:22px;bottom:14px;color:rgba(255,255,255,.48);font-size:13px">无关历史是关键对照：只有相关经验有效，才能排除“记忆越多越好”。</p>
-            </div>
+              <div class="p8-case-tabs"><div>前半段 · 案例 A：相似装篮任务间迁移</div><div>后半段 · 案例 B：抓取与摆放技能复用</div></div>
+            </section>
           </div>
-          <div class="five-metric-ribbon reveal d3">
-            <div class="five-metric primary"><span>新任务首次成功率</span><b data-editable>LIVE</b></div>
-            <div class="five-metric"><span>总体成功率提升</span><b data-editable>LIVE</b></div>
-            <div class="five-metric"><span>净救援数</span><b data-editable>LIVE</b></div>
-            <div class="five-metric"><span>负迁移率</span><b data-editable>LIVE</b></div>
-            <div class="five-metric"><span>额外推理延迟</span><b data-editable>LIVE</b></div>
-          </div>
-          <div class="five-causal reveal d4"><div><strong>历史经验来源</strong><br>任务、步骤、成功或失败</div><div class="arrow">→</div><div><strong>当前决策变化</strong><br>是否采用、介入强度、动作差异</div><div class="arrow">→</div><div><strong>真实执行结果</strong><br>救援、伤害或无变化均可核查</div></div>
         </div>
       </section>
 
@@ -1212,7 +1255,7 @@
               <div class="team-body-v2"><div class="team-section-title">技术与产业背景</div><ul class="team-points"><li>北京大学智能科学博士</li><li>曾任阿里达摩院资深算法专家</li><li>多年自动驾驶、无人机、机器人训练和产业落地经验</li><li>统筹 AI & 机器人软件实验室</li><li>在 TIP 等权威期刊及 IEEE 顶会发表多篇论文</li><li>全国大学生大数据竞赛（DataCastle）图像搜索冠军</li></ul><div class="team-section-title">关键成就</div><ul class="team-points"><li>浙江省科技进步一等奖，科技创新2030—“新一代人工智能”项目负责人；雪亮工程全国第一；海外国家级大G项目、国家级大模型应用、中东核心基建出海 AI 落地</li><li>NL2SQL RL 框架超越 OpenAI：延迟 ↓60% · 吞吐 ×9</li><li>机器人跨层通行和车镜协同、机器人云平台</li><li>跨境（物流、海关、航空、商务园区）机器人</li><li>C919 大飞机航空驾驶舱具身智能原型机负责人</li></ul></div>
             </article>
             <article class="team-card-v2 reveal d5">
-              <div class="team-head-v2"><div class="team-photo hao" role="img" aria-label="孔浩照片"></div><div class="team-identity"><div class="position">CTO</div><h3>孔浩</h3><div class="roman">KONG HAO</div><div class="scope">多智能体 / 强化学习</div></div></div>
+              <div class="team-head-v2"><div class="team-photo hao" role="img" aria-label="孔浩照片"></div><div class="team-identity"><div class="position">首席算法架构师</div><h3>孔浩</h3><div class="roman">KONG HAO</div><div class="scope">多智能体 / 强化学习</div></div></div>
               <div class="team-body-v2"><div class="team-section-title">技术与研究背景</div><ul class="team-points"><li>北京大学智能科学系博士</li><li>曾任西安电子科技大学副教授</li><li>美团 / 腾讯微信大模型资深训练负责人</li><li>ICML、CVPR、IEEE 顶会及权威期刊多篇论文</li><li>数学、物理、程序设计等多项国家一、二等奖</li></ul><div class="team-section-title">关键成就</div><ul class="team-points"><li>聚焦可解释网络设计，提出任务自适应的全新网络模块与优化思路；深耕张量表示学习与优化算法，推出多项原创算法并完成理论论证</li><li>海外 MOBA 游戏 AI Bot：自研多智能体强化训练框架、海外公测部署；日本麻将 AI Bot 天凤段水平不完全信息博弈突破</li><li>微信 AI 搜索大模型强化训练负责人，大模型多智能体强化学习迭代优化</li></ul></div>
             </article>
           </div>
